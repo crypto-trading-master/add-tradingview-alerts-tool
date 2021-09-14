@@ -39,7 +39,7 @@ const readFilePromise = (filename: string) => {
 
 const addAlertsMain = async (configFileName) => {
 
-    const headless = false
+    const headless = true
     logLogInfo()
     logBaseDelay()
 
@@ -106,10 +106,12 @@ const addAlertsMain = async (configFileName) => {
         headless: headless, userDataDir: "./user_data",
         defaultViewport: null,
 
+        /*
         args: headless ? null : [
             `--app=${config.tradingview.chartUrl}#signin`,
             // '--window-size=1440,670'
         ]
+        */
     })
 
     let page
